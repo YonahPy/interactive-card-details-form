@@ -5,6 +5,7 @@
 }
 
 :root{
+    --Linear-gradient:(active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
     --White: hsl(0, 0%, 100%);
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
@@ -31,19 +32,102 @@ main{
     background-image: url('interactive-card-details-form-main/images/bg-main-mobile.png');
     background-repeat: no-repeat;
     background-size: contain;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end
 }
 
 .card-back{
-    display: flex;
-    justify-content: flex-end;
-    padding: 30px 20px 0px 0px;
     margin-bottom: -92px;
+    width: 352px;
+    height: 200px;
+    margin-right: 20px;
+    background-color: var(--Light-grayish-violet);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.div-black{
+    background-color: hsla(0, 0%, 0%, 0.74);
+    margin-top: 20px;
+    padding: 20px;
+    
+}
+
+.meio{
+    background-color: var(--Dark-grayish-violet);
+    width: 80%;
+    align-self: center;
+    margin-top: 20px;
+    padding: 3px;
+    text-align: end;
+    border-radius: 5px;
+    color: white;
+
+}
+
+span{
+    width: 50px ;
+}
+.circulos{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.circulo-maior p{
+
+    width: 45px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.circulo-menor{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.numeros{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.nome{
+    margin-left: 32px;
+}
+.data{
+    margin-left: 130px;
 }
 
 .card-front{
-    
-    padding-left:20px;
+    width: 352px;
+    height: 200px;
+    color: white;
+    background-image: linear-gradient(
+        115deg,
+        hsl(249deg 99% 64%) 0%,
+        hsl(268deg 95% 41%) 7%,
+        hsl(280deg 82% 34%) 19%,
+        hsl(283deg 57% 43%) 35%,
+        hsl(335deg 86% 58%) 55%,
+        hsl(333deg 97% 54%) 77%,
+        hsl(278deg 93% 30%) 100%
+      );
+    z-index: 10;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-left: 20px;
+    border-radius: 5px;
 }
 
 .images img{
@@ -79,7 +163,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-inline: 20px;
+    padding-inline: 50px;
 }
 
 .col{
