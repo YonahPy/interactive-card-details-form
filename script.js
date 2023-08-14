@@ -1,36 +1,60 @@
-
-const lettersOnlyRegex = /^[A-Za-z]+$/;
-const errorName = document.getElementById('name-error');
+const lettersOnlyRegex = /^[A-Za-z\s]+$/;
+const numbersOnlyRegex = /^[0-9\s]+$/;
 const submitButton = document.getElementById('submit');
+const nameInput = document.getElementById('iname');
+const numberInput = document.getElementById('inumber');
+const date = document.getElementById('idate');
+const genrer = document.getElementById('my');
+const cvc = document.getElementsByName('cvc');
+const nameError = document.getElementById('name-error');
+const numberError = document.getElementById('number-error');
+const dateError = document.getElementById('date-error');
+const genrerError = document.getElementById('genrer-error');
+const cvcError = document.getElementById('cvc-error');
+const className = document.querySelector('.nome');
+const classNumbers = document.querySelector('.numeros');
+const form = document.getElementById('myform');
 
-iname.addEventListener('input', function() {
-    
-    
-    const iname = document.getElementById('iname').value;
-    
+
+nameInput.addEventListener('input', function() {
+    const iname = nameInput.value.trim();
     
     if (lettersOnlyRegex.test(iname)) {
-        errorName.textContent = '';
+        nameError.textContent = '';
         submitButton.removeAttribute('disabled');
+        className.textContent = iname;
     } else {
-        errorName.textContent = 'Digite apenas letras';
+        nameError.textContent = 'Digite apenas letras';
         submitButton.setAttribute('disabled', true);
     }
-})
+});
 
-const number = document.getElementById('inumber').value;
-const numberError = document.getElementById('number-error');
+numberInput.addEventListener('input', function(){
+    const number = numberInput.value.trim();
+    
+    if (numbersOnlyRegex.test(number)){
+        numberError.textContent = '';
+        submitButton.removeAttribute('disabled');
+        classNumbers.textContent = number;
+    } else{
+        numberError.textContent = 'Digite apenas números';
+        submitButton.setAttribute('disabled', true);
+    }
+});
 
-const date = document.getElementById('idate').value;
-const dateError = document.getElementById('date-error');
 
-const genrer = document.getElementById('my').value;
-const genrerError = document.getElementById('genrer-error');
 
-const cvc = document.getElementsByName('cvc').value;
-const cvcError = document.getElementById('cvc-error');
 
-const form = document.getElementById('myform');
+
+
+
+
+
+
+
+
+
+
 
 
 form.addEventListener('submit', function(event) {
