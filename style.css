@@ -152,6 +152,7 @@ input{
 }
 #submit{
     width: 100%;
+    max-width: 360px;
     padding: 15px;
     font-size: 18px;
     color: white;
@@ -178,6 +179,7 @@ input{
 }
 .col input{
     width: 100%;
+    max-width: 400px;
 }
 .form-group{
     margin-bottom: 20px;
@@ -190,6 +192,7 @@ input{
 }
 .row input{
     width: 50%;
+    max-width: 80px;
 }
 #cvc{
     width: 80%;
@@ -207,4 +210,18 @@ input{
     color: red;
     font-size: 14px;
     margin-top: 5px;
+}
+.finish{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.finish div,h1,p{
+    margin-bottom: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+}
+
+@media (min-width: 532px){
+
 }

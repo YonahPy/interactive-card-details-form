@@ -24,12 +24,17 @@
                 <div class="numeros">0000 0000 0000 0000</div>
 
                 <span class="nome">Jane Appleseed</span>
-                <span class="data">00/00</span>
+                <span class="data">
+
+                    <span id="data">00</span>/
+                    <span id="dia">00</span>
+
+                </span>
             </div>
         </section>
 
-        <section class="form" id="myform">
-            <form action="#">
+        <section class="section2">
+            <form action="#" id="myform" class="form">
                 <div class="col">
                     <div class="form-group">
                         <label for="iname">CARDHOLDER NAME</label>
@@ -46,18 +51,18 @@
                 <div class="row">
                     <div class="form-group">
                         <label for="idate">EXP.DATE</label>
-                        <input type="text" required placeholder="MM" id="idate">
+                        <input type="text" required placeholder="MM" id="idate" maxlength="2" minlength="2" min="1" max="12">
                         <div class="error-message" id="date-error"></div>
 
                     </div>
                     <div class="form-group">
-                        <label for="my">(MM/YY)</label>
-                        <input type="text" required placeholder="YY" id="my">
-                        <div class="error-message" id="genrer-error"></div>
+                        <label for="iday">(MM/YY)</label>
+                        <input type="text" required placeholder="YY" id="iday" maxlength="2" minlength="2" max="31" min="1">
+                        <div class="error-message" id="day-error"></div>
                     </div>
                     <div class="form-group">
                         <label for="cvc">CVC</label>
-                        <input type="text" required placeholder="e.g. 123" id="cvc">
+                        <input type="text" required placeholder="e.g. 123" id="cvc" maxlength="3" minlength="3" >
                         <div class="error-message" id="cvc-error"></div>
                     </div>
                 </div>
